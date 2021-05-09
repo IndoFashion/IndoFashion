@@ -71,7 +71,7 @@ Mojari</td>
 
 ### Data Format
 
-The COSMOS training, validation and test sets are provided as JSON (JavaScript Object Notation) text files with the
+In the Indofashion dataset, training, validation and test sets are provided as JSON (JavaScript Object Notation) text files with the
 following attributes for every data sample stored as a dictionary:
 
 File Structure for train.json, val.json and test.json
