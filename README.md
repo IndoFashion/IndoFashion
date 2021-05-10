@@ -95,7 +95,7 @@ File Structure for train.json, val.json and test.json
 | `image_url`    | URL used to download the image                     | 
 | `image_path`          | Source path in dataset directory for the image                  |
 | `brand`           | Brand name of the product                          |
-| `product_title`       | Bried description of the product                           |
+| `product_title`       | Brief description of the product                           |
 | `class_label`  | Label of the product                           |
 
 </br>
