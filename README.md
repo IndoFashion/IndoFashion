@@ -2,7 +2,7 @@
 
 Indofashion dataset is the first large-scale ethnic dataset of over 106K images with 15 different categories for
 fine-grained classification of Indian ethnic clothes. For more information, refer to the [paper](https://arxiv.org/abs/2104.02830). To access the dataset, please fill
-out [this form](https://docs.google.com/forms/d/13kJQ2wlv7sxyXoaM1Ddon6Nq7dUJY_oftl-6xzwTGow). We will provide you
+out [this form](https://docs.google.com/forms/d/10Nke6m8MvCxP7hoJQ_k-mtiejbXtE0RliX9w_8pooLQ). We will provide you
 script to download the dataset.
 
 <p float="left">

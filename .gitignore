@@ -1,1 +1,4 @@
 .idea/*
+models/*
+data/*
+tf_logs/*
