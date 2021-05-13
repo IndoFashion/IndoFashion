@@ -6,6 +6,8 @@ out [this form](https://docs.google.com/forms/d/10Nke6m8MvCxP7hoJQ_k-mtiejbXtE0R
 script to download the dataset.
 
 
+![Image Title](teaser.jpeg)
+
 ### Dataset Description
 
 #### Dataset Statistics
