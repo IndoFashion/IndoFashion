@@ -10,8 +10,10 @@ class ResNetFeaturesFlatten(nn.Module):
     def __init__(self, model_key):
         """
            Initialize the model architecture
+
            Args:
                model_key (str): Key value corresponding to the model architecture
+
            Returns:
                None
            """
@@ -34,12 +36,12 @@ class ResNetFeaturesFlatten(nn.Module):
     def forward(self, input):
         """
            Function to compute forward pass of the network
+
            Args:
-               input (Tensor): Image tensor of shape (N X C X H X W), where
-               N denotes minibatch size,
-               C, H, W denotes image channels, width and height
+               input (Tensor): Image tensor of shape (N X C X H X W), where N denotes minibatch size, C, H, W denotes image channels, width and height
+
            Returns:
-               output: Raw prediction scores for each class
+               output (Tensor): Raw prediction scores for each class
            """
         x = self.conv1(input)
         x = self.bn1(x)

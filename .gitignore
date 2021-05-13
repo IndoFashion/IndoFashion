@@ -2,3 +2,5 @@
 models/*
 data/*
 tf_logs/*
+docs/build/*
+*.pyc

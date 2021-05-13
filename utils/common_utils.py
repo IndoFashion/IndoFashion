@@ -47,8 +47,10 @@ CLOTH_CATEGORIES = {enums.SAREE: 0,
 def read_json_data(file_name):
     """
         Utility function to read data from json file
+
         Args:
             file_name (str): Path to json file to be read
+
         Returns:
             article_list (List<dict>): List of dict that contains metadata for each item
     """
@@ -60,6 +62,7 @@ def read_json_data(file_name):
 def get_accuracy(y_pred, y_actual):
     """
         Utility function to compute accuracy for the minibatch
+
         Args:
             y_pred (Tensor): Predicted class labess
             y_actual (Tensor): Ground Truth class labels

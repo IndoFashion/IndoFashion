@@ -11,10 +11,12 @@ class EthnicFinderDataset(Dataset):
 
     def __init__(self, metadata_file, mode, transform=None):
         """
+
         Args:
             metadata_file (string): Path to the json file with annotations.
             mode (string): train, test, val
             transform (callable): Transform to be applied on a sample.
+
         Returns:
             None
         """

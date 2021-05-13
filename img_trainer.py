@@ -3,6 +3,7 @@
 """
 import os
 import torch
+import argparse
 import torch.utils.data
 from tqdm import tqdm
 import torch.optim as optim
@@ -13,7 +14,18 @@ from utils.common_utils import image_transform, image_transform_jitter_flip, get
 from utils.dataset import EthnicFinderDataset
 import numpy as np
 
-model_name = "iew_r50_jitter_flip"
+parser = argparse.ArgumentParser(formatter_class=argparse.ArgumentDefaultsHelpFormatter)
+parser.add_argument('-m', '--mode', type=str, default='test',
+                    help="mode, {'" + "train" + "', '" + "test" + "'}")
+parser.add_argument('-n', '--model_name', type=str,
+                    default='my_model',
+                    help='Model Name')
+parser.add_argument('-a', '--architecture', type=str, default='resnet18',
+                    help="model architecture, {'" + "', '".join(config.MODELS.keys()) + "'}")
+
+args = parser.parse_args()
+
+model_name = args.model_name
 
 # Dataloaders
 train_set = EthnicFinderDataset(metadata_file=config.train_file, mode='train', transform=image_transform_jitter_flip)
@@ -24,7 +36,7 @@ test_set = EthnicFinderDataset(metadata_file=config.test_file, mode='test', tran
 test_loader = torch.utils.data.DataLoader(test_set, batch_size=config.batch_size, shuffle=True, num_workers=2)
 
 # Model
-cloth_model = ResNetFeaturesFlatten(model_key="resnet50").to(config.device)
+cloth_model = ResNetFeaturesFlatten(model_key=args.architecture).to(config.device)
 
 # Optimizer
 optimizer = optim.Adam(cloth_model.parameters(), lr=config.lr)
@@ -38,6 +50,7 @@ logger = tflogger.Logger(model_name=model_name, data_name='ours',
 def train_epoch(epoch):
     """
         Runs one training epoch
+
         Args:
             epoch (int): Epoch number
     """
@@ -73,6 +86,7 @@ def train_epoch(epoch):
 def eval_epoch(epoch):
     """
         Runs one evaluation epoch
+
         Args:
             epoch (int): Epoch number
     """
@@ -188,5 +202,8 @@ def test_classifier():
 
 
 if __name__ == '__main__':
-    # train_model()
-    test_classifier()
+
+    if args.mode == "train":
+        train_model()
+    elif args.mode == "test":
+        test_classifier()

@@ -11,6 +11,7 @@ class Logger:
     def __init__(self, model_name, data_name, log_path):
         """
             Initializes the logger object for computing loss/accuracy curves
+
             Args:
                 model_name (str): The name of the model for which training needs to be monitored
                 data_name (str): Dataset name
@@ -30,11 +31,13 @@ class Logger:
     def log(self, mode, scalar_value, epoch, scalar_name='error'):
         """
             Logs the scalar value passed for train and val epoch
+
             Args:
                 mode (str): train/val
                 scalar_value (float): loss/accuracy value to be logged
                 epoch (int): epoch number
                 scalar_name (str): name of scalar to be logged
+
             Returns:
                 None
         """
