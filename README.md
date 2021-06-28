@@ -119,13 +119,13 @@ File Structure for train.json, val.json and test.json
 **If you find our dataset or paper useful for research , please include the following citation:**
 
 ```
-@misc{rajput2021indofashion,
-      title={IndoFashion : Apparel Classification for Indian Ethnic Clothes}, 
-      author={Pranjal Singh Rajput and Shivangi Aneja},
-      year={2021},
-      eprint={2104.02830},
-      archivePrefix={arXiv},
-      primaryClass={cs.CV}
+@InProceedings{Rajput_2021_CVPR,
+    author    = {Rajput, Pranjal Singh and Aneja, Shivangi},
+    title     = {IndoFashion: Apparel Classification for Indian Ethnic Clothes},
+    booktitle = {Proceedings of the IEEE/CVF Conference on Computer Vision and Pattern Recognition (CVPR) Workshops},
+    month     = {June},
+    year      = {2021},
+    pages     = {3935-3939}
 }
 ```
 
