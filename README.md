@@ -110,7 +110,8 @@ File Structure for train.json, val.json and test.json
 1. **Source Code:**   `$ git clone` this repo and install the Python dependencies from `requirements.txt`
 2. **Dataset** Download the dataset by filling out the
    form [here](https://docs.google.com/forms/d/10Nke6m8MvCxP7hoJQ_k-mtiejbXtE0RliX9w_8pooLQ/edit).
-3. **Train and Test** Coming Soon
+3. **Train** Coming Soon
+4. **Test** The pretrained checkpoints can be downloaded and are available [here](https://drive.google.com/drive/folders/1T1gwi6j7eaCpn93axH8gxOi9icbu-h4Q)
 
 </br>
 
